@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EX"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.naver.sozlo.service.MemberDao">
+	
+		<resultMap type="com.naver.sozlo.entities.Member" id="memberMap">
+		
+			<id property="id"          column="id"/>
+			<id property="password"    column="password"/>
+			<id property="cardno"      column="cardno"/>
+			<id property="phone1"      column="phone1"/>
+			<id property="phone2"      column="phone2"/>
+			<id property="phone3"      column="phone3"/>
+			<id property="zipcode"     column="zipcode"/>
+			<id property="addr1"       column="addr1"/>
+			<id property="addr2"       column="addr2"/>
+			<id property="email"       column="email"/>
+			<id property="inputdate"   column="inputdate"/>
+			<id property="job"         column="job"/>
+			<id property="memberlevel" column="memberlevel"/>
+			<id property="photo"       column="photo"/>
+			<id property="name"        column="name"/>
+		
+		</resultMap>
+		
+		<select id="selectCount" parameterType="String" resultType="int">
+			select count(*) from member where id=#{id}
+		</select>
+		
+		<select id="selectOne" parameterType="String" resultMap="memberMap">
+			select * from member where id=#{id}
+		</select>
+		
+		
+		
+		
+		<select id="selectAll"  resultMap="memberMap">
+			select * from member 
+		</select>
+		
+		<select id="selectphoto" parameterType="String"  resultMap="memberMap">
+			select photo from member where id=#{id}
+		</select>
+		
+		<update id="updateData" parameterType="hashMap">
+			update member set name=#{name} ,password=#{password}
+							  ,phone2=#{phone2}
+							  ,phone3=#{phone3}
+							  ,addr1=#{addr1}
+							  ,addr2=#{addr2}
+							  where id=#{id}		  
+						
+		</update>
+		
+		<insert id="insertRow" parameterType="hashMap"  >
+			INSERT INTO member
+				(
+				    id,
+				    name,
+				    password,
+				    photo,
+				    phone1,
+				    phone2,
+				    phone3,
+				    email
+				)
+				VALUES
+				(
+				 	#{id},
+				    #{name},			 	
+				    #{password}, 
+				    #{photo},
+				    #{phone1},
+				    #{phone2},
+				    #{phone3},
+				    #{email}
+				    
+				)
+		</insert>
+		<delete id="deleteRow" parameterType="String">
+			delete from member
+			where id=#{id}
+		
+		</delete>
+		
+		<select id="selectLogin" parameterType="hashMap" resultMap="memberMap">
+			select * from member where email=#{email} and password=#{password}
+		</select>
+		
+		
+	</mapper>

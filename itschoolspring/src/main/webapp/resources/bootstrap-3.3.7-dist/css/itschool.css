@@ -1,0 +1,97 @@
+/* .div-bgcolor-red{ */
+/* 	background: #ff0000; */
+/* } */
+/* .div-bgcolor-green{ */
+/* 	background: #ffff80; */
+/* } */
+/* .div-bgcolor-blue{ */
+/* 	font-family:cursive; */
+/* 	background: #0000ff; */
+/* 	font-size: 50px; */
+/* } */
+/* .div-bgcolor-white{ */
+/* 	background: #ffffff; */
+/* } */
+/* .div-bgcolor-black{ */
+/* 	background: #000000; */
+/* } */
+
+/* .con-new{ */
+/* 	margin-top: 50px; */
+/* } */
+
+.il{
+	margin:0;
+	padding:0;
+	}
+.div-bgcolor-red{
+
+	background: #FFD700;
+
+}
+
+.div-bgcolor-green{
+
+	background: #FF0000;
+
+}
+
+.div-bgcolor-blue{
+
+	background: #0000FF;
+
+}
+
+.div-bgcolor-black{
+
+	background: #000000;
+
+}
+
+.con-new {
+
+	margin-top: 20px;
+
+}
+.ccon-new {
+
+	padding-top: 20px;
+
+}
+
+
+.con-newil{
+	width : 40%;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top: 20px;
+	
+
+}
+
+.background-color-green{
+	background:#7FFF00;	
+}
+
+.background-color-red{
+	background:#ff0000;	
+}
+
+.background-color-blue{
+	background:#0000ff;	
+}
+
+.background-color-yellow{
+	background:#ffff00;	
+}
+
+.background-color-black{
+	background:#400040;	
+}
+.background-color-pink{
+	background:#ff00ff;	
+}
+
+
+
+
